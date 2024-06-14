@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character set, compatibility, and responsive design -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the webpage -->
+    <title>My Portfolio</title>
+
+    <!-- Link to external stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+  </head>
+
+  <body>
+    <!-- Desktop navigation menu -->
+    <nav id="desktop-nav">
+      <div class="logo">My Portfolio</div> <!-- My Portfolio -->
+      <div>
+        <ul class="nav-links">
+          <!-- Navigation links -->
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="menu-links">
+      <!-- Navigation links for mobile, with toggleMenu function to close the menu on click -->
+      <li><a href="#about" onclick="toggleMenu()">About</a></li>
+      <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+      <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </div>
+  </div>
+</nav>
+
+<!-- Profile section -->
+<section id="profile">
+  <!-- Container for the profile picture -->
+  <div class="section__pic-container">
+    <img src="./assets/Jaimie Profile.jpg" alt="Jaimie Thi profile picture" /> <!-- Display the profile picture -->
+  </div>
+  
+  <!-- Container for the profile text -->
+  <div class="section__text">
+    <p class="section__text__p1">Hello, I'm</p> <!-- Introduction text -->
+    <h1 class="title">Jaimie Thi</h1> <!-- Display the name -->
+    <p class="section__text__p2">Computer Science Student at FRC</p> <!-- Display the subtitle -->
+    <p class="section__text__p3"> Welcome To My Portfolio</p> <!-- Display additional welcome text -->
+  </div>
+</section>
+
+
+    <!-- About section -->
+    <section id="about">
+      <div class="section__text__p1">Get To Know More</div> <!-- Section introduction text -->
+      <h1 class="title">About Me</h1> <!-- Section title -->
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/frc-image.jpg" alt="Profile picture" class="about-pic" /> <!-- Profile picture -->
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <!-- Experience details -->
+            <div class="details-container">
+              <img src="./assets/experience icon.png" alt="Experience icon" class="icon" />
+              <h3>Experience</h3>
+              <p>Computer Science 20S, Computer Science 30S, Computer Science 40S <br />Grade 12 Student attending FRC</p>
+            </div>
+            <!-- Education details -->
+            <div class="details-container">
+              <img src="./assets/education icon.png" alt="education icon" class="icon" />
+              <h3>Education</h3>
+              <p>Fort Richmond Collgiate <br />2021 - PRESENT</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <div class="highlighted-text">
+              <p> <!-- Personal story -->
+                My coding journey began in Fort Richmond Collgiate, the first language I learned was Python Turtle. Python Turtle
+                taught me the basics of coding like For Loops, and Functions. Python Turtle taught exactly what I 
+                needed to succeed in Grade 11 Computer Science. I would say in Grade 11 is where I grew the most as a coder, the 
+                languages I learned in that year were JavaScript and Java. Most of the projects I did that year will be displayed
+                in my Portfolio. In Grade 12, we dove deeper into Java, focusing on the inner workings of the language and doing more
+                tests and a few labs. I'd say Grade 12 will be the most preparing for Post-Secondary education, the tests were on paper 
+                and group lab assignments will prepare me for the future at UOFM.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Arrow to navigate to experience section -->
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#experience'" />
+    </section>
+
+    <!-- Languages section -->
+    <section id="Languages">
+      <p class="section__text__p1">Explore My</p> <!-- Section introduction text -->
+      <h1 class="title">Languages</h1> <!-- Section title -->
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- Experience details for various programming languages -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Computer Science languages</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/arrow point.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Python Turtle</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/arrow point.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/arrow point.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/arrow point.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Java</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/arrow point.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/arrow point.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Arrow to navigate to projects section -->
+      <img src="./assets/arrow point.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#projects'" />
+    </section>
+
+    <!-- Projects section -->
+    <section id="projects">
+      <p class="section__text__p1">Browse My Projects Over The Years</p> <!-- Section introduction text -->
+      <h1 class="title">Projects</h1> <!-- Section title -->
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- Project 1 details -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/VirtualPet.PNG" alt="Project 1" class="project-img" /> <!-- Project image -->
+            </div>
+            <h2 class="experience-sub-title project-title">Virtual Pet Project</h2> <!-- Project title -->
+            <div class="btn-container">
+              <!-- Button for live demo of project 1 -->
+              <button class="btn btn-color->
+
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://studio.code.org/projects/applab/u5YDEhuCWJH33gmIl4hHOyix5XSn6T6fFDHC2KH19sk'"
+              >
+
+              
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/JewleryStore.PNG"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Website Project</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://studio.code.org/projects/applab/vIAwvcE6CVECDgszK_gdh4pZINqCWEWP4qTiLFJoOIk'"
+              >
+
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Basket Catch Project.PNG"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Basket Catch</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://trinket.io/python/19dc6943b8'"
+              >
+                Live Demo
+              </button>
+            </div>
+            </div>
+            </div>
+            </div>
+            <!-- Arrow icon to navigate to Contact section -->
+            <img
+              src="./assets/arrow.png"
+              alt="Arrow icon"
+              class="icon arrow"
+              onclick="location.href='./#contact'"
+            />
+            </section>
+            <!-- Contact section -->
+            <section id="contact">
+              <p class="section__text__p1">Get in Touch</p>
+              <h1 class="title">Contact Me</h1>
+              <div class="contact-info-upper-container">
+                <!-- Email contact information -->
+                <div class="contact-info-container">
+                  <img
+                    src="./assets/email.png"
+                    alt="Email icon"
+                    class="icon contact-icon email-icon"
+                  />
+                  <p><a href="mailto:examplemail@gmail.com">JaimieThi15@gmail.com</a></p>
+                </div>
+                <!-- FRC contact information -->
+                <div class="contact-info-container">
+                  <img
+                    src="./assets/frc logo 1.png"
+                    alt="FRC icon"
+                    class="icon contact-icon"
+                  />
+                  <p><a href="https://www.pembinatrails.ca/fortrichmond">School Website</a></p>
+                </div>
+              </div>
+            </section>
+            <!-- Footer section -->
+            <footer>
+              <nav>
+                <div class="nav-links-container">
+                  <!-- Navigation links in the footer -->
+                  <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                  </ul>
+                </div>
+              </nav>
+            <!-- Linking external JavaScript file -->
+            <script src="script.js"></script>
+            </body>
+            </html>
+            

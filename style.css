@@ -1,0 +1,506 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  background-color: #1e1e1e; /* Dark background */
+  color: #cbbb51; /* Text color */
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Paragraph text color */
+p {
+  color: #8f8f8f; /* Light gray text color */
+}
+
+/* TRANSITION */
+
+/* Apply transition effect to links and buttons */
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+/* Style for navigation bar and links */
+nav,
+.nav-links {
+  display: flex;
+}
+
+/* Navigation bar layout */
+nav {
+  justify-content: space-around; /* Distribute items evenly along the main axis */
+  align-items: center; /* Center items vertically */
+  height: 17vh; /* Set height of the navigation bar */
+}
+
+/* Navigation links layout */
+.nav-links {
+  gap: 2rem; /* Spacing between navigation links */
+  list-style: none; /* Remove default list styling */
+  font-size: 1.5rem; /* Font size for navigation links */
+}
+
+/* Styling for anchor (link) elements */
+a {
+  color: #cbbb51; /* Link color */
+  text-decoration: none; /* Remove underline */
+  text-decoration-color: white; /* Color for underline (not supported in all browsers) */
+}
+
+/* Hover effect for anchor elements */
+a:hover {
+  color: grey; /* Change color on hover */
+  text-decoration: underline; /* Add underline on hover */
+  text-underline-offset: 1rem; /* Offset for underline */
+  text-decoration-color: rgb(181, 181, 181); /* Color for underline on hover */
+}
+
+/* Logo styling */
+.logo {
+  font-size: 3rem; /* Increase font size */
+  color: #cbbb51; /* Change color to a more appealing one */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow */
+  font-weight: bold; /* Set font weight */
+}
+
+/* Hover effect for logo */
+.logo:hover {
+  cursor: default; /* Change cursor type on hover */
+}
+
+
+/* HAMBURGER MENU */
+
+/* Hide hamburger menu on default */
+#hamburger-nav {
+  display: none;
+}
+
+/* Styling for hamburger menu */
+.hamburger-menu {
+  position: relative; /* Relative positioning */
+  display: inline-block; /* Display as inline-block */
+}
+
+/* Styling for hamburger icon */
+.hamburger-icon {
+  display: flex; /* Display as flex container */
+  flex-direction: column; /* Column layout for icon */
+  justify-content: space-between; /* Space between lines */
+  height: 24px; /* Height of the icon */
+  width: 30px; /* Width of the icon */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Styling for each line in hamburger icon */
+.hamburger-icon span {
+  width: 100%; /* Full width */
+  height: 2px; /* Height of each line */
+  background-color: black; /* Line color */
+  transition: all 0.3s ease-in-out; /* Transition effect */
+}
+
+/* Styling for menu links */
+.menu-links {
+  position: absolute; /* Absolute positioning */
+  top: 100%; /* Position below the hamburger icon */
+  right: 0; /* Align to the right */
+  background-color: white; /* Background color for menu */
+  width: fit-content; /* Width based on content */
+  max-height: 0; /* Initially hidden */
+  overflow: hidden; /* Hide overflow */
+  transition: all 0.3s ease-in-out; /* Transition effect */
+}
+
+/* Styling for menu link items */
+.menu-links a {
+  display: block; /* Display as block element */
+  padding: 10px; /* Padding around each link */
+  text-align: center; /* Center text */
+  font-size: 1.5rem; /* Font size */
+  color: black; /* Text color */
+  text-decoration: none; /* Remove underline */
+  transition: all 0.3s ease-in-out; /* Transition effect */
+}
+
+/* Remove default list styling for menu links */
+.menu-links li {
+  list-style: none;
+}
+
+/* Open state for menu links */
+.menu-links.open {
+  max-height: 300px; /* Max height when menu is open */
+}
+
+/* Animation for hamburger icon when menu is open */
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px); /* Rotate and translate lines */
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0; /* Hide middle line */
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px); /* Rotate and translate lines */
+}
+
+/* Reset transformation for hamburger icon */
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* Reset opacity for hamburger icon */
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+/* Reset transformation for hamburger icon */
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+/* SECTION STYLING */
+
+/* General styling for sections */
+section {
+  padding-top: 4vh; /* Top padding */
+  height: 96vh; /* Full height of section */
+  margin: 0 10rem; /* Margin on left and right sides */
+  box-sizing: border-box; /* Include padding and border in total width/height */
+  min-height: fit-content; /* Allow section height to fit its content */
+}
+
+/* Container for section contents */
+.section-container {
+  display: flex; /* Flex layout for contents */
+}
+
+/* PROFILE SECTION */
+
+/* Profile section container */
+#profile {
+  display: flex; /* Flex layout for profile section */
+  justify-content: center; /* Center items horizontally */
+  gap: 5rem; /* Spacing between elements */
+  height: 80vh; /* Height of profile section */
+}
+
+/* Profile picture container */
+.section__pic-container {
+  display: flex; /* Flex layout for picture container */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 400px; /* Height of the picture container */
+}
+
+/* Profile picture styling */
+.section__pic-container img {
+  max-width: 80%; /* Maximum width for the image */
+  border-radius: 80%; /* Rounded border */
+  border: 3px solid #555; /* Grey border */
+  box-shadow: 0 0 100px #cbbb51; /* Box shadow */
+}
+
+/* Text container in profile section */
+.section__text {
+  align-self: center; /* Align text vertically */
+  text-align: center; /* Center text */
+}
+
+/* Specific styling for paragraphs in profile section */
+.section__text p {
+  font-weight: 600; /* Bold font weight */
+}
+
+/* Additional paragraph styling */
+.section__text__p1 {
+  text-align: center; /* Center text */
+}
+
+/* Styling for another paragraph */
+.section__text__p2 {
+  font-size: 1.75rem; /* Larger font size */
+  margin-bottom: 1rem; /* Bottom margin */
+}
+
+/* Title styling */
+.title {
+  font-size: 3rem; /* Larger font size */
+  text-align: center; /* Center text */
+}
+
+/* Social media icons container */
+#socials-container {
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center items horizontally */
+  margin-top: 1rem; /* Top margin */
+  gap: 1rem; /* Spacing between icons */
+}
+
+/* ICONS */
+
+/* General icon styling */
+.icon {
+  cursor: pointer; /* Pointer cursor */
+  height: 2rem; /* Icon height */
+}
+
+/* BUTTONS */
+
+/* Container for buttons */
+.btn-container {
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center items horizontally */
+  gap: 1rem; /* Spacing between buttons */
+}
+
+/* Basic button styling */
+.btn {
+  font-weight: 600; /* Bold font weight */
+  transition: all 300ms ease; /* Transition effect */
+  padding: 1rem; /* Padding */
+  width: 8rem; /* Width of button */
+  border-radius: 2rem; /* Rounded corners */
+  background: rgb(139, 139, 139); /* Background color */
+  color: #000000; /* Text color */
+  border: rgb(139, 139, 139) 0.1rem solid; /* Border */
+}
+
+/* Hover state for button */
+.btn:hover {
+  cursor: pointer; /* Pointer cursor */
+  background: rgb(53, 53, 53); /* Darker background on hover */
+}
+
+/* Reduce gap between buttons */
+.btn-container {
+  gap: 1rem; /* Spacing between buttons */
+}
+
+/* ABOUT SECTION */
+
+
+#about {
+  position: relative; /* Relative positioning */
+  color: #cbbb51; /* Text color (changed to pink?) */
+}
+
+/* Container for about section elements */
+.about-containers {
+  gap: 2rem; /* Spacing between containers */
+  margin-bottom: 2rem; /* Bottom margin */
+  margin-top: 2rem; /* Top margin */
+}
+
+/* Container for details in about section */
+.about-details-container {
+  justify-content: center; /* Center items horizontally */
+  flex-direction: column; /* Column layout */
+  color: rgb(53, 53, 53); /* Text color */
+}
+
+/* General styling for containers in about section */
+.about-containers,
+.about-details-container {
+  display: flex; /* Flex layout */
+  color: #cbbb51; /* Text color */
+}
+
+/* Styling for picture in about section */
+.about-pic {
+  border-radius: 2rem; /* Rounded corners */
+}
+
+/* Arrow positioning */
+.arrow {
+  position: absolute; /* Absolute positioning */
+  right: -5rem; /* Right offset */
+  bottom: 2.5rem; /* Bottom offset */
+}
+
+/* Container for details */
+.details-container {
+  padding: 1.5rem; /* Padding */
+  flex: 1; /* Flexibility */
+  background: #ffffff; /* Background color */
+  border-radius: 2rem; /* Rounded corners */
+  border: rgb(53, 53, 53) 0.1rem solid; /* Border */
+  border-color: rgb(53, 53, 53); /* Border color */
+  text-align: center; /* Center text */
+}
+
+/* Adjust section container */
+.section-container {
+  gap: 4rem; /* Spacing between sections */
+  height: 80%; /* Height of section container */
+}
+
+/* Adjust picture container */
+.section__pic-container {
+  height: 400px; /* Height of picture container */
+  width: 400px; /* Width of picture container */
+  margin: auto 0; /* Center horizontally */
+}
+
+/* EXPERIENCE SECTION */
+
+/* Experience section */
+#experience {
+  position: relative; /* Relative positioning */
+}
+
+/* Subtitle styling */
+.experience-sub-title {
+  color: #cbbb51; /* Dark grey text color */
+  font-weight: 600; /* Bold font weight */
+  font-size: 1.75rem; /* Font size */
+  margin-bottom: 2rem; /* Bottom margin */
+}
+
+/* Container for experience details */
+.experience-details-container {
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center items horizontally */
+  flex-direction: column; /* Column layout */
+}
+
+/* Container for articles */
+.article-container {
+  display: flex; /* Flex layout */
+  text-align: initial; /* Left-align text */
+  flex-wrap: wrap; /* Wrap items to new line */
+  flex-direction: row; /* Row layout */
+  gap: 2.5rem; /* Spacing between items */
+  justify-content: space-around; /* Evenly distribute items */
+}
+
+/* Individual article styling */
+article {
+  display: flex; /* Flex layout */
+  width: 10rem; /* Fixed width */
+  justify-content: space-around; /* Evenly distribute items */
+  gap: 0.5rem; /* Spacing between items */
+}
+
+/* Icon styling within article */
+article .icon {
+  cursor: default; /* Default cursor */
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative; /* Relative positioning */
+  padding: 2rem; /* Padding around the section */
+  background-color: #ffffff; /* Light background color for contrast */
+  border-radius: 1rem; /* Rounded corners */
+  max-height: 60vh; /* Maximum height of the projects section */
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.project-img {
+  width: 100%; /* Full width */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Cover the image within the container */
+}
+
+.project-content {
+  padding: 1rem 1.5rem; /* Padding inside the card */
+  text-align: center; /* Center align text */
+}
+
+.project-title {
+  margin: 0.5rem 0; /* Margin around the title */
+  font-size: 1.5rem; /* Larger font size */
+  color: rgb(53, 53, 53); /* Dark text color */
+  font-weight: 600; /* Semi-bold font weight */
+  
+}
+
+/* Project button styling */
+.project-btn {
+  color: black; /* Text color */
+  border-color: rgb(163, 163, 163); /* Border color */
+}
+
+
+/* CONTACT */
+
+/* Contact section */
+#contact {
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center items horizontally */
+  flex-direction: column; /* Column layout */
+  height: 70vh; /* Height of contact section */
+}
+
+/* Upper container for contact info */
+.contact-info-upper-container {
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center items horizontally */
+  border-radius: 2rem; /* Rounded corners */
+  border: rgb(53, 53, 53) 0.1rem solid; /* Border */
+  border-color: rgb(163, 163, 163); /* Border color */
+  background: (250, 250, 250); /* Background color (note: invalid syntax, should be rgb or hex) */
+  margin: 2rem auto; /* Margin */
+  padding: 0.5rem; /* Padding */
+}
+
+/* Container for contact info */
+.contact-info-container {
+  display: flex; /* Flex layout */
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 0.5rem; /* Spacing between items */
+  margin: 1rem; /* Margin */
+}
+
+/* Contact info text styling */
+.contact-info-container p {
+  font-size: larger; /* Larger font size */
+}
+
+/* Icon styling within contact info */
+.contact-icon {
+  cursor: default; /* Default cursor */
+}
+
+/* Email icon styling */
+.email-icon {
+  height: 2.5rem; /* Height of email icon */
+}
+
+/* FOOTER SECTION */
+
+/* Footer section */
+footer {
+  height: 26vh; /* Height of footer */
+  margin: 0 1rem; /* Margin */
+}
+
+/* Paragraph styling within footer */
+footer p {
+  text-align: center; /* Center text */
+}
